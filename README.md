@@ -2,7 +2,7 @@ Instalar la base de datos desde el SQL con cualquiera de los .bak
 
 Cambiar la ConnectionString en la DAL (clases DataAccess y DBConnection) en total son 3 string.
 
-Cambiar el path de los Restores en el código del formulario BackUpRestore, esta arriba de todo en la clase
+Cambiar el path de los Restores en el código del formulario BackUpRestore, esta arriba de todo en la clase (Crear carpeta "Restores" en el directorio deseado"
 
 Usuario administrador:
 45225554
