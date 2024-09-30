@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E591015-7D81-4C6E-9E6C-E9946609B161}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KwikEMart</RootNamespace>
+    <AssemblyName>KwikEMart</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackUpRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUpRestore.Designer.cs">
+      <DependentUpon>BackUpRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitacoraCambio.Designer.cs">
+      <DependentUpon>BitacoraCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitacoraEventos.Designer.cs">
+      <DependentUpon>BitacoraEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDespachar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDespachar.Designer.cs">
+      <DependentUpon>FormDespachar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLlenarCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLlenarCarrito.Designer.cs">
+      <DependentUpon>FormLlenarCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPagar.Designer.cs">
+      <DependentUpon>formPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSolicitudCot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSolicitudCot.Designer.cs">
+      <DependentUpon>formSolicitudCot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmABMClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABMClientes.Designer.cs">
+      <DependentUpon>frmABMClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABMProductos.Designer.cs">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmABMProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABMProveedores.Designer.cs">
+      <DependentUpon>frmABMProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarIdioma.Designer.cs">
+      <DependentUpon>frmCambiarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCobrar.Designer.cs">
+      <DependentUpon>frmCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionPerfiles.Designer.cs">
+      <DependentUpon>frmGestionPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogout.Designer.cs">
+      <DependentUpon>frmLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSerializacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSerializacion.Designer.cs">
+      <DependentUpon>frmSerializacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenOrdenCompra.Designer.cs">
+      <DependentUpon>GenOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCuentas.Designer.cs">
+      <DependentUpon>GestionCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionFamiliasPatentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionFamiliasPatentes.Designer.cs">
+      <DependentUpon>GestionFamiliasPatentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BackUpRestore.resx">
+      <DependentUpon>BackUpRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraCambio.resx">
+      <DependentUpon>BitacoraCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraEventos.resx">
+      <DependentUpon>BitacoraEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDespachar.resx">
+      <DependentUpon>FormDespachar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLlenarCarrito.resx">
+      <DependentUpon>FormLlenarCarrito.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPagar.resx">
+      <DependentUpon>formPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSolicitudCot.resx">
+      <DependentUpon>formSolicitudCot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABMClientes.resx">
+      <DependentUpon>frmABMClientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABMProductos.resx">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABMProveedores.resx">
+      <DependentUpon>frmABMProveedores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarIdioma.resx">
+      <DependentUpon>frmCambiarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCobrar.resx">
+      <DependentUpon>frmCobrar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionPerfiles.resx">
+      <DependentUpon>frmGestionPerfiles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogout.resx">
+      <DependentUpon>frmLogout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSerializacion.resx">
+      <DependentUpon>frmSerializacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenOrdenCompra.resx">
+      <DependentUpon>GenOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCuentas.resx">
+      <DependentUpon>GestionCuentas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionFamiliasPatentes.resx">
+      <DependentUpon>GestionFamiliasPatentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{c9374763-684d-4edb-9500-57c0faf811a0}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{912a0358-d0b8-4f2c-991c-2e751f702ca7}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{e7952255-9ffe-40fe-b6b5-f4ba24dfd994}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kwiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logopequeño.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SimboloAyuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha quitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha_quitar-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha_agregar-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\band-arg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera-arg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\band-arg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_circle-flag-of-uk_11571351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_estrellas-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_estrellas-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera china.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
